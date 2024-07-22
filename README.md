@@ -27,36 +27,12 @@ bash <(curl -sSL https://get.docker.com)
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "tcp",
-                "tcpSettings": {
-                    "header": {
-                        "type": "http",
-                        "response": {
-                            "version": "1.1",
-                            "status": "200",
-                            "reason": "OK",
-                            "headers": {
-                                "Content-Type": [
-                                    "application/octet-stream",
-                                    "video/mpeg",
-                                    "application/x-msdownload",
-                                    "text/html",
-                                    "application/x-shockwave-flash"
-                                ],
-                                "Content-Length": [
-                                    "25000000"
-                                ],
-                                "Transfer-Encoding": [
-                                    "chunked"
-                                ],
-                                "Connection": [
-                                    "keep-alive"
-                                ],
-                                "Pragma": "no-cache"
-                            }
-                        }
-                    }
+                "httpupgradeSettings": {
+                    "headers": {},
+                    "host": "",
+                    "path": "/"
                 },
+                "network": "httpupgrade",
                 "security": "none"
             }
         },
