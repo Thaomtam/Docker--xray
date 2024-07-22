@@ -108,7 +108,7 @@ docker run -itd \
 ```
 ## Check logs
 ```
-docker logs -f sing-box
+docker logs -f xray
 ```
 ## Làm mới
 ```
