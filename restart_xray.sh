@@ -5,10 +5,10 @@ CONTAINER_ID=$(docker ps -q --filter "name=xray")
 
 # Kiểm tra xem container có đang chạy không
 if [ -n "$CONTAINER_ID" ]; then
-    echo "Restarting sing-box container..."
+    echo "Restarting xray container..."
     docker restart $CONTAINER_ID
 else
-    echo "sing-box container is not running."
+    echo "xray container is not running."
 fi
 
 # Thêm cron job nếu chưa tồn tại
