@@ -13,16 +13,16 @@
                     }
                 ],
                 "decryption": "none"
-		    },
+            },
             "streamSettings": {
-				"httpupgradeSettings": {
-				  "headers": {},
-				  "host": "",
-				  "path": "/"
-				},
-				"network": "httpupgrade",
-				"security": "none"
-			}
+                "httpupgradeSettings": {
+                    "headers": {},
+                    "host": "",
+                    "path": "/"
+                },
+                "network": "httpupgrade",
+                "security": "none"
+            }
         },
         {
             "port": 16557,
