@@ -8,11 +8,20 @@ timedatectl set-timezone Asia/Ho_Chi_Minh
 ```
 bash <(curl -sSL https://get.docker.com)
 ```
-## config.json
+## thoitiet.json
 ```
 {
     "log": {
-        "loglevel": "info"
+        "loglevel": "warning"
+    },
+    "routing": {
+        "rules": [
+            {
+                "port": "443",
+                "network": "udp",
+                "outboundTag": "block"
+            }
+        ]
     },
     "inbounds": [
         {
