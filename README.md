@@ -93,8 +93,8 @@ bash <(curl -sSL https://get.docker.com)
                 "auth": "password",
                 "accounts": [
                     {
-                        "user": "admin123",
-                        "pass": "admin123123"
+                        "user": "thoitiet",
+                        "pass": "thoitiet"
                     }
                 ],
                 "udp": true,
