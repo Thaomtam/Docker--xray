@@ -37,7 +37,33 @@ bash <(curl -sSL https://get.docker.com)
             },
             "streamSettings": {
                 "httpupgradeSettings": {
-                    "headers": {},
+                    "header": {
+                        "type": "http",
+                        "response": {
+                            "version": "1.1",
+                            "status": "200",
+                            "reason": "OK",
+                            "headers": {
+                                "Content-Type": [
+                                    "application/octet-stream",
+                                    "video/mpeg",
+                                    "application/x-msdownload",
+                                    "text/html",
+                                    "application/x-shockwave-flash"
+                                ],
+								"Content-Length": [
+									"25000000"
+								],
+                                "Transfer-Encoding": [
+                                    "chunked"
+                                ],
+                                "Connection": [
+                                    "keep-alive"
+                                ],
+                                "Pragma": "no-cache"
+                            }
+                        }
+                    },
                     "host": "",
                     "path": "/"
                 },
@@ -52,8 +78,8 @@ bash <(curl -sSL https://get.docker.com)
                 "auth": "password",
                 "accounts": [
                     {
-                        "user": "thoitiet",
-                        "pass": "thoitiet"
+                        "user": "admin123",
+                        "pass": "admin123123"
                     }
                 ],
                 "udp": true,
