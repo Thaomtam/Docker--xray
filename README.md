@@ -126,6 +126,20 @@ docker logs -f xray
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 ```
+### Tiêu đề nâng cấp HTTP
+
+Tiêu đề nâng cấp HTTP được định cấu hình để xử lý nhiều loại nội dung khác nhau và tối ưu hóa hiệu suất kết nối. Các tiêu đề bao gồm:
+
+- **Content-Type**: Chỉ định loại MIME mà máy chủ có thể gửi. Điêu nay bao gôm:
+  - `ứng dụng/octet-stream`
+  - `video/mpeg`
+  - `ứng dụng/x-msdownload`
+  - `văn bản/html`
+  - `ứng dụng/x-shockwave-flash`
+- **Độ dài nội dung**: Độ dài của nội dung cần gửi, được đặt thành `25000000` byte (25MB).
+- **Mã hóa chuyển mã**: Cho biết nội dung được gửi theo khối.
+- **Kết nối**: Đặt thành `keep-alive` để duy trì kết nối liên tục.
+- **Thực dụng**: Đặt thành `no-cache` để đảm bảo phản hồi không được máy khách lưu vào bộ nhớ đệm.
 ## Hạt nhân tuỳ chỉnh tcp xoá kernel
 ```
 bash -c "$(curl -L https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh)"
