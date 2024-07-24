@@ -53,7 +53,7 @@ bash <(curl -sSL https://get.docker.com)
             "streamSettings": {
                 "httpupgradeSettings": {
                     "header": {
-                        "type": "http",
+                        "type": "httpupgrade",
                         "response": {
                             "version": "1.1",
                             "status": "200",
@@ -129,7 +129,7 @@ docker run -itd \
     --env TZ=Asia/Ho_Chi_Minh \
     --name=xray \
     --restart=unless-stopped \
-    ghcr.io/xtls/xray-core \
+    ghcr.io/xtls/xray-core:latest \
     -c /etc/xray/config.json
 ```
 ## Check logs
