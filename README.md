@@ -51,9 +51,9 @@ bash <(curl -sSL https://get.docker.com)
                                     "text/html",
                                     "application/x-shockwave-flash"
                                 ],
-								"Content-Length": [
-									"25000000"
-								],
+				"Content-Length": [				
+				    "25000000"						
+				],
                                 "Transfer-Encoding": [
                                     "chunked"
                                 ],
