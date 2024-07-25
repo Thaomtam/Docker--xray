@@ -27,7 +27,7 @@ bash <(curl -sSL https://get.docker.com)
 ```
 {
     "log": {
-        "loglevel": "warning"
+        "loglevel": "info"
     },
     "routing": {
         "rules": [
@@ -53,7 +53,7 @@ bash <(curl -sSL https://get.docker.com)
             "streamSettings": {
                 "httpupgradeSettings": {
                     "header": {
-                        "type": "httpupgrade",
+                        "type": "http",
                         "response": {
                             "version": "1.1",
                             "status": "200",
@@ -63,12 +63,56 @@ bash <(curl -sSL https://get.docker.com)
                                     "application/octet-stream",
                                     "video/mpeg",
                                     "application/x-msdownload",
-                                    "text/html",
-                                    "application/x-shockwave-flash"
+                                    "text/html; charset=UTF-8",
+                                    "application/x-shockwave-flash",
+                                    "text/plain",
+                                    "text/css",
+                                    "text/javascript",
+                                    "image/jpeg",
+                                    "image/png",
+                                    "audio/mpeg",
+                                    "audio/ogg",
+                                    "video/mp4",
+                                    "application/json",
+                                    "application/xml",
+                                    "application/pdf",
+                                    "application/zip",
+                                    "application/x-www-form-urlencoded",
+                                    "application/vnd.ms-excel",
+                                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    "multipart/form-data"
                                 ],
-				"Content-Length": [				
-				    "25000000"						
-				],
+                                "Content-Length": [
+                                    "25000000"
+                                ],
+                                "Content-Encoding": [
+                                    "gzip",
+                                    "deflate"
+                                ],
+                                "Access-Control-Allow-Headers": [
+                                    "Origin",
+                                    "X-Requested-With",
+                                    "Content-Type",
+                                    "Accept",
+                                    "Authorization"
+                                ],
+                                "Access-Control-Allow-Methods": [
+                                    "GET",
+                                    "POST",
+                                    "PUT",
+                                    "DELETE",
+                                    "OPTIONS"
+                                ],
+                                "Access-Control-Allow-Origin": "*",
+                                "Access-Control-Max-Age": "600",
+                                "Access-Control-Request-Headers": [
+                                    "Origin",
+                                    "X-Requested-With",
+                                    "Content-Type",
+                                    "Accept",
+                                    "Authorization"
+                                ],
+                                "Vary": "Accept-Encoding",
                                 "Transfer-Encoding": [
                                     "chunked"
                                 ],
