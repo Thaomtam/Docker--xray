@@ -27,7 +27,7 @@ bash <(curl -sSL https://get.docker.com)
 ```
 {
     "log": {
-        "loglevel": "info"
+        "loglevel": "warning"
     },
     "routing": {
         "rules": [
