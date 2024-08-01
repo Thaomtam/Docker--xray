@@ -1,6 +1,6 @@
 {
     "log": {
-        "loglevel": "info"
+        "loglevel": "warning"
     },
     "inbounds": [
         {
@@ -13,15 +13,16 @@
                     }
                 ],
                 "decryption": "none"
-		    },
+            },
             "streamSettings": {
-				"network": "ws",
-				"security": "none",
-				"wsSettings": {
-				  "headers": {},
-				  "path": "/"
-				}
-			}
+                "network": "ws",
+                "security": "none",
+                "wsSettings": {
+                    "acceptProxyProtocol": false,
+                    "headers": {},
+                    "path": "/gists/cache"
+                }
+            }
         },
         {
             "port": 16557,
@@ -30,8 +31,8 @@
                 "auth": "password",
                 "accounts": [
                     {
-                        "user": "thoitiet",
-                        "pass": "thoitiet"
+                        "user": "admin123",
+                        "pass": "admin123123"
                     }
                 ],
                 "udp": true,
